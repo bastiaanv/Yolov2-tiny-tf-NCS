@@ -1,0 +1,260 @@
+digraph output {
+	Legend [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR><TD  BGCOLOR = "#E0E0E0" COLSPAN="3">Layer</TD></TR>
+<TR><TD BGCOLOR = "#88FFFF"> Complexity <br/> (MFLOPs) </TD>
+<TD BGCOLOR = "#FF88FF"> Bandwidth <br/> (MB/s) </TD>
+<TD BGCOLOR = "#FFFF88"> Time <br/> (ms)</TD></TR>
+</TABLE>>
+ shape=plaintext]
+	Input [label="input: (1, 416, 416, 3)"]
+	"LeakyRelu/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(16, 416, 416)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 149.520384 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 1175.91 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFB5"> 7.58 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	Input -> "LeakyRelu/Maximum"
+	MaxPool [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(16, 208, 208)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 2.768896 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 792.17 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFB8"> 6.67 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu/Maximum" -> MaxPool
+	"LeakyRelu_1/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_1/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(32, 208, 208)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 398.721024 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 859.71 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFA2"> 13.83 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool -> "LeakyRelu_1/Maximum"
+	MaxPool_1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool_1</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(32, 104, 104)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 1.384448 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 926.74 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFC4"> 2.85 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_1/Maximum" -> MaxPool_1
+	"LeakyRelu_2/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_2/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(64, 104, 104)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 398.721024 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 647.10 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFB0"> 9.24 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool_1 -> "LeakyRelu_2/Maximum"
+	MaxPool_2 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool_2</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(64, 52, 52)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 0.692224 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 958.90 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFC8"> 1.38 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_2/Maximum" -> MaxPool_2
+	"LeakyRelu_3/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_3/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(128, 52, 52)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 398.721024 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 402.46 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFB5"> 7.74 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool_2 -> "LeakyRelu_3/Maximum"
+	MaxPool_3 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool_3</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(128, 26, 26)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 0.346112 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 951.23 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFCA"> 0.69 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_3/Maximum" -> MaxPool_3
+	"LeakyRelu_4/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_4/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(256, 26, 26)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 398.721024 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 211.29 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFAF"> 9.71 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool_3 -> "LeakyRelu_4/Maximum"
+	MaxPool_4 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool_4</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(256, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 0.173056 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 926.53 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFCB"> 0.36 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_4/Maximum" -> MaxPool_4
+	"LeakyRelu_5/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_5/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(512, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 398.721024 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 327.03 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFB0"> 9.18 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool_4 -> "LeakyRelu_5/Maximum"
+	MaxPool_5 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">MaxPool_5</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(512, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 0.346112 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 450.94 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFCB"> 0.37 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_5/Maximum" -> MaxPool_5
+	"LeakyRelu_6/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_6/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(1024, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 1594.884096 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 314.67 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFF66"> 33.38 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	MaxPool_5 -> "LeakyRelu_6/Maximum"
+	"LeakyRelu_7/Maximum" [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">LeakyRelu_7/Maximum</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(1024, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 3189.768192 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 313.27 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFF0"> 67.00 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_6/Maximum" -> "LeakyRelu_7/Maximum"
+	Output [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR>
+    <TD  BGCOLOR = "#A3A3A3" COLSPAN="3">Output</TD>
+</TR>
+<TR>
+    <TD  BGCOLOR = "#DDDDDD" COLSPAN="3">(125, 13, 13)</TD>
+</TR>
+<TR>
+    <TD BGCOLOR = "#FFFFFF"> 43.264 <br/> (MFLOPs) </TD>
+    <TD BGCOLOR = "#FFFFFF"> 431.82 <br/> (MB/s) </TD>
+    <TD BGCOLOR = "#FFFFC9"> 1.33 <br/> (ms)</TD>
+</TR>
+</TABLE>>
+ shape=plaintext]
+	"LeakyRelu_7/Maximum" -> Output
+	Output [label="output: [13, 13, 125]"]
+	Output -> Output
+	Summary [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="3">
+<TR><TD  BGCOLOR = "#C60000" COLSPAN="3">Summary</TD></TR>
+<TR><TD  BGCOLOR = "#E2E2E2" COLSPAN="3">12 SHV Processors</TD></TR>
+<TR><TD  BGCOLOR = "#DADADA" COLSPAN="3">Inference time 171.30 ms</TD></TR>
+<TR><TD  BGCOLOR = "#E2E2E2" COLSPAN="3">Bandwidth 451.94 MB/sec</TD></TR>
+<TR><TD  BGCOLOR = "#DADADA" COLSPAN="3">This network is Compute bound</TD></TR>
+</TABLE>>
+ shape=plaintext]
+}
