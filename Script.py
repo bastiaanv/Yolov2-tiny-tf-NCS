@@ -26,8 +26,6 @@ with tf.Session() as sess:
 	tf.train.write_graph( sess.graph_def, "./model/", "NN.pb", as_text=False )	
 
 	output_image, boxes = NN.postprocess(prediction, cv2_image, 0.3, 0.3)
-	cv2.imshow("Result", output_image)
 	cv2.imwrite("./images/test.jpg", output_image)
-	cv2.waitKey(0)
 
 	print("Done!!")

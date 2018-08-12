@@ -8,10 +8,12 @@ I made this repo to make a tensorflow implementation of Yolov2 possible for the 
 
 ### How to use it on the NCS
 - clone the repo on a linux 16.04 system
-- install ncsdk2 and opencv2
+- install ncsdk2
 - run the following command in the terminal:
 ```python
-make run
+python3 Script.py
+make compile
+python3 run.py -m [video/image] [-i PathToImage] [-v PathToVideo] [-v 0] #Last one is for using your webcam
 ```
 - and done! The output of the network will look something like this:
 
@@ -19,7 +21,6 @@ make run
 
 ### How to use it normally / in debug mode
 - clone the repo
-- install opencv2
 - run the following script with python3: Script.py
 - and done! The output should be the same as on the NCS
 
