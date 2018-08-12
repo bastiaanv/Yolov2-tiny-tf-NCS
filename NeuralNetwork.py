@@ -32,6 +32,14 @@ class Net:
 	}
 
 	image = tf.placeholder(tf.float32, shape=[1, 416, 416, 3], name="Input")
+	actual_width = 0.0
+	actual_height = 0.0
+	input_height = 416
+	input_width = 416
+	video = False
+	cv_window_name = "Result - press q to quit"
+	fps = 0.0
+	seconds = 0
 
 	def leaky_relu(self, x, alpha=0.1):
 		return tf.nn.leaky_relu(x, alpha=alpha)
@@ -104,9 +112,10 @@ class Net:
 
 		return biases,kernel_weights,offset
 
-	def preproces_image(self, input_img_path):
-		input_image = cv2.imread(input_img_path)
-		resized_image = cv2.resize(input_image,(416, 416), interpolation = cv2.INTER_CUBIC)
+	def preproces_image(self, input):
+		self.actual_height, self.actual_width, _ = input.shape
+
+		resized_image = cv2.resize(input, (self.input_height, self.input_width), interpolation = cv2.INTER_CUBIC)
 		image_data = np.array(resized_image, dtype='f')
 		image_data /= 255.
 		image_array = np.expand_dims(image_data, 0)
@@ -165,10 +174,9 @@ class Net:
 
 		return nms_predictions
 
-	def postprocess(self, predictions, input_img_path, score_threshold, iou_threshold, input_height=416, input_width=416):
+	def postprocess(self, predictions, input, score_threshold, iou_threshold):
 
-		input_image = cv2.imread(input_img_path)
-		input_image = cv2.resize(input_image,(input_height, input_width), interpolation = cv2.INTER_CUBIC)
+		input_image = cv2.resize(input, (self.input_height, self.input_width), interpolation = cv2.INTER_CUBIC)
 
 		anchors = [1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52]
 		thresholded_predictions = []
@@ -203,25 +211,32 @@ class Net:
 					if( (final_confidence * best_class_score) > score_threshold):
 						thresholded_predictions.append([ [left,top,right,bottom], final_confidence * best_class_score, self.classes[best_class] ])
 
-		thresholded_predictions.sort(key=lambda tup: tup[1], reverse=True)
-		nms_predictions = self.non_maximal_suppression(thresholded_predictions, iou_threshold)
+		nms_predictions = []
+		if len(thresholded_predictions) != 0:
+			thresholded_predictions.sort(key=lambda tup: tup[1], reverse=True)
+			nms_predictions = self.non_maximal_suppression(thresholded_predictions, iou_threshold)
 
-		# Draw boxes with texts
-		for i in range(len(nms_predictions)):
-			color = self.colors[nms_predictions[i][2]]
-			best_class_name = nms_predictions[i][2]
-			textWidth = cv2.getTextSize(best_class_name, cv2.FONT_HERSHEY_SIMPLEX, 1, 1)[0][0] + 10
+			# Draw boxes with texts
+			for i in range(len(nms_predictions)):
+				color = self.colors[nms_predictions[i][2]]
+				best_class_name = nms_predictions[i][2]
+				textWidth = cv2.getTextSize(best_class_name, cv2.FONT_HERSHEY_SIMPLEX, 1, 1)[0][0] + 10
 			
-			input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]), (nms_predictions[i][0][2],nms_predictions[i][0][3]), color)
-			input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]-20), (nms_predictions[i][0][0]+textWidth, nms_predictions[i][0][1]), color, -1)
-			input_image = cv2.putText(input_image, best_class_name, (nms_predictions[i][0][0]+5, nms_predictions[i][0][1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, 4)
-	  
-		return input_image
+				input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]), (nms_predictions[i][0][2],nms_predictions[i][0][3]), color)
+				input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]), (nms_predictions[i][0][0]+textWidth, nms_predictions[i][0][1]+20), color, -1)
+				input_image = cv2.putText(input_image, best_class_name, (nms_predictions[i][0][0]+5, nms_predictions[i][0][1]+20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, 4)
 
-	def __init__(self, Debugging=False):
+		#resize image back to original and show it
+		input_image = cv2.resize(input_image,(self.actual_height, self.actual_width))
+
+		return input_image, nms_predictions
+
+	def __init__(self, Debugging=False, video=False):
 		self.bn_epsilon = 1e-3
+		self.video = video
 
 		if Debugging:
+			print("Loading weights and biases...")
 			offset = 0
 			loaded_weights = []
 	
@@ -277,7 +292,6 @@ class Net:
 			print("Biases and weights are loaded!!")
 
 	def predict(self):
-		self.timer = time.time()
 		#1 conv1     16  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  16
 		conv1 = tf.add(tf.nn.conv2d(self.image, self.weights1, strides=[1, 1, 1, 1], padding='SAME'), self.biases1)
 		conv1 = self.leaky_relu( conv1 )
@@ -330,7 +344,6 @@ class Net:
 
 		#15 conv9   125  1 x 1 / 1    13 x  13 x 1024   ->    13 x  13 x125
 		conv9 = tf.add(tf.nn.conv2d(conv8, self.weights9, strides=[1, 1, 1, 1], padding='SAME'), self.biases9, name="Output")
-
 		return conv9
 
 

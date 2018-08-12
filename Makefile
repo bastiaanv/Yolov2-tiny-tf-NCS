@@ -30,10 +30,15 @@ check: freeze
 	@echo "\nComparing results with standard TensorFlow..."
 	(cd model; mvNCCheck -s 12 $(MODEL_CKPT)_frozen.pb -in=$(INPUT_NODE_NAME) -on=$(OUTPUT_NODE_NAME);)
 
-.PHONY: run
+.PHONY: run_video
 run: compile
 	@echo "\nRunning project..."
-	(python3 run.py)
+	(python3 "run video.py")
+
+.PHONY: run_image
+run: compile
+	@echo "\nRunning project..."
+	(python3 "run image.py")
 
 .PHONY: help
 help:
@@ -43,6 +48,8 @@ help:
 	@echo "  make compile - Convert the trained model into Movidius graph file.";
 	@echo "  make check - Compare inference results with that of TensorFlow running on CPU/GPU.";
 	@echo "  make profile - Run the model on NCS and extract complexity, bandwidth and execution time for each layer.";
+	@echo "	 make run_video - Runs the model using the first videocam found on your device.";
+	@echo "  make run_image - Run the model using the image defined inside the 'run image.py'";
 
 .PHONY: clean
 clean:

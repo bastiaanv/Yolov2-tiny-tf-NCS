@@ -46,7 +46,7 @@
 <text text-anchor="start" x="241" y="-1748.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="315.5,-1740.8 315.5,-1778.8 375.5,-1778.8 375.5,-1740.8 315.5,-1740.8"/>
 <polygon fill="none" stroke="black" points="315.5,-1740.8 315.5,-1778.8 375.5,-1778.8 375.5,-1740.8 315.5,-1740.8"/>
-<text text-anchor="start" x="319.5" y="-1763.6" font-family="Times,serif" font-size="14.00"> 1175.91 </text>
+<text text-anchor="start" x="319.5" y="-1763.6" font-family="Times,serif" font-size="14.00"> 1175.24 </text>
 <text text-anchor="start" x="321.5" y="-1748.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffb5" stroke="none" points="375.5,-1740.8 375.5,-1778.8 415.5,-1778.8 415.5,-1740.8 375.5,-1740.8"/>
 <polygon fill="none" stroke="black" points="375.5,-1740.8 375.5,-1778.8 415.5,-1778.8 415.5,-1740.8 375.5,-1740.8"/>
@@ -72,7 +72,7 @@
 <text text-anchor="start" x="242.5" y="-1620.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-1612.8 314.5,-1650.8 370.5,-1650.8 370.5,-1612.8 314.5,-1612.8"/>
 <polygon fill="none" stroke="black" points="314.5,-1612.8 314.5,-1650.8 370.5,-1650.8 370.5,-1612.8 314.5,-1612.8"/>
-<text text-anchor="start" x="319.5" y="-1635.6" font-family="Times,serif" font-size="14.00"> 792.17 </text>
+<text text-anchor="start" x="319.5" y="-1635.6" font-family="Times,serif" font-size="14.00"> 792.37 </text>
 <text text-anchor="start" x="318.5" y="-1620.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffb8" stroke="none" points="370.5,-1612.8 370.5,-1650.8 410.5,-1650.8 410.5,-1612.8 370.5,-1612.8"/>
 <polygon fill="none" stroke="black" points="370.5,-1612.8 370.5,-1650.8 410.5,-1650.8 410.5,-1612.8 370.5,-1612.8"/>
@@ -98,11 +98,11 @@
 <text text-anchor="start" x="239" y="-1492.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="313.5,-1484.8 313.5,-1522.8 369.5,-1522.8 369.5,-1484.8 313.5,-1484.8"/>
 <polygon fill="none" stroke="black" points="313.5,-1484.8 313.5,-1522.8 369.5,-1522.8 369.5,-1484.8 313.5,-1484.8"/>
-<text text-anchor="start" x="318.5" y="-1507.6" font-family="Times,serif" font-size="14.00"> 859.71 </text>
+<text text-anchor="start" x="318.5" y="-1507.6" font-family="Times,serif" font-size="14.00"> 860.74 </text>
 <text text-anchor="start" x="317.5" y="-1492.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffa2" stroke="none" points="369.5,-1484.8 369.5,-1522.8 416.5,-1522.8 416.5,-1484.8 369.5,-1484.8"/>
 <polygon fill="none" stroke="black" points="369.5,-1484.8 369.5,-1522.8 416.5,-1522.8 416.5,-1484.8 369.5,-1484.8"/>
-<text text-anchor="start" x="373.5" y="-1507.6" font-family="Times,serif" font-size="14.00"> 13.83 </text>
+<text text-anchor="start" x="373.5" y="-1507.6" font-family="Times,serif" font-size="14.00"> 13.82 </text>
 <text text-anchor="start" x="378" y="-1492.6" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool&#45;&gt;LeakyRelu_1/Maximum -->
@@ -124,11 +124,11 @@
 <text text-anchor="start" x="242.5" y="-1364.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-1356.8 314.5,-1394.8 370.5,-1394.8 370.5,-1356.8 314.5,-1356.8"/>
 <polygon fill="none" stroke="black" points="314.5,-1356.8 314.5,-1394.8 370.5,-1394.8 370.5,-1356.8 314.5,-1356.8"/>
-<text text-anchor="start" x="319.5" y="-1379.6" font-family="Times,serif" font-size="14.00"> 926.74 </text>
+<text text-anchor="start" x="319.5" y="-1379.6" font-family="Times,serif" font-size="14.00"> 928.35 </text>
 <text text-anchor="start" x="318.5" y="-1364.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffc4" stroke="none" points="370.5,-1356.8 370.5,-1394.8 410.5,-1394.8 410.5,-1356.8 370.5,-1356.8"/>
 <polygon fill="none" stroke="black" points="370.5,-1356.8 370.5,-1394.8 410.5,-1394.8 410.5,-1356.8 370.5,-1356.8"/>
-<text text-anchor="start" x="374.5" y="-1379.6" font-family="Times,serif" font-size="14.00"> 2.85 </text>
+<text text-anchor="start" x="374.5" y="-1379.6" font-family="Times,serif" font-size="14.00"> 2.84 </text>
 <text text-anchor="start" x="375.5" y="-1364.6" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- LeakyRelu_1/Maximum&#45;&gt;MaxPool_1 -->
@@ -150,11 +150,11 @@
 <text text-anchor="start" x="243" y="-1236.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="317.5,-1228.8 317.5,-1266.8 373.5,-1266.8 373.5,-1228.8 317.5,-1228.8"/>
 <polygon fill="none" stroke="black" points="317.5,-1228.8 317.5,-1266.8 373.5,-1266.8 373.5,-1228.8 317.5,-1228.8"/>
-<text text-anchor="start" x="322.5" y="-1251.6" font-family="Times,serif" font-size="14.00"> 647.10 </text>
+<text text-anchor="start" x="322.5" y="-1251.6" font-family="Times,serif" font-size="14.00"> 647.61 </text>
 <text text-anchor="start" x="321.5" y="-1236.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffb0" stroke="none" points="373.5,-1228.8 373.5,-1266.8 413.5,-1266.8 413.5,-1228.8 373.5,-1228.8"/>
 <polygon fill="none" stroke="black" points="373.5,-1228.8 373.5,-1266.8 413.5,-1266.8 413.5,-1228.8 373.5,-1228.8"/>
-<text text-anchor="start" x="377.5" y="-1251.6" font-family="Times,serif" font-size="14.00"> 9.24 </text>
+<text text-anchor="start" x="377.5" y="-1251.6" font-family="Times,serif" font-size="14.00"> 9.23 </text>
 <text text-anchor="start" x="378.5" y="-1236.6" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool_1&#45;&gt;LeakyRelu_2/Maximum -->
@@ -176,7 +176,7 @@
 <text text-anchor="start" x="242.5" y="-1108.6" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-1100.8 314.5,-1138.8 370.5,-1138.8 370.5,-1100.8 314.5,-1100.8"/>
 <polygon fill="none" stroke="black" points="314.5,-1100.8 314.5,-1138.8 370.5,-1138.8 370.5,-1100.8 314.5,-1100.8"/>
-<text text-anchor="start" x="319.5" y="-1123.6" font-family="Times,serif" font-size="14.00"> 958.90 </text>
+<text text-anchor="start" x="319.5" y="-1123.6" font-family="Times,serif" font-size="14.00"> 958.87 </text>
 <text text-anchor="start" x="318.5" y="-1108.6" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffc8" stroke="none" points="370.5,-1100.8 370.5,-1138.8 410.5,-1138.8 410.5,-1100.8 370.5,-1100.8"/>
 <polygon fill="none" stroke="black" points="370.5,-1100.8 370.5,-1138.8 410.5,-1138.8 410.5,-1100.8 370.5,-1100.8"/>
@@ -202,11 +202,11 @@
 <text text-anchor="start" x="243" y="-980.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="317.5,-972.802 317.5,-1010.8 373.5,-1010.8 373.5,-972.802 317.5,-972.802"/>
 <polygon fill="none" stroke="black" points="317.5,-972.802 317.5,-1010.8 373.5,-1010.8 373.5,-972.802 317.5,-972.802"/>
-<text text-anchor="start" x="322.5" y="-995.602" font-family="Times,serif" font-size="14.00"> 402.46 </text>
+<text text-anchor="start" x="322.5" y="-995.602" font-family="Times,serif" font-size="14.00"> 401.67 </text>
 <text text-anchor="start" x="321.5" y="-980.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffb5" stroke="none" points="373.5,-972.802 373.5,-1010.8 413.5,-1010.8 413.5,-972.802 373.5,-972.802"/>
 <polygon fill="none" stroke="black" points="373.5,-972.802 373.5,-1010.8 413.5,-1010.8 413.5,-972.802 373.5,-972.802"/>
-<text text-anchor="start" x="377.5" y="-995.602" font-family="Times,serif" font-size="14.00"> 7.74 </text>
+<text text-anchor="start" x="377.5" y="-995.602" font-family="Times,serif" font-size="14.00"> 7.75 </text>
 <text text-anchor="start" x="378.5" y="-980.602" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool_2&#45;&gt;LeakyRelu_3/Maximum -->
@@ -228,11 +228,11 @@
 <text text-anchor="start" x="242.5" y="-852.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-844.802 314.5,-882.802 370.5,-882.802 370.5,-844.802 314.5,-844.802"/>
 <polygon fill="none" stroke="black" points="314.5,-844.802 314.5,-882.802 370.5,-882.802 370.5,-844.802 314.5,-844.802"/>
-<text text-anchor="start" x="319.5" y="-867.602" font-family="Times,serif" font-size="14.00"> 951.23 </text>
+<text text-anchor="start" x="319.5" y="-867.602" font-family="Times,serif" font-size="14.00"> 948.28 </text>
 <text text-anchor="start" x="318.5" y="-852.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffca" stroke="none" points="370.5,-844.802 370.5,-882.802 410.5,-882.802 410.5,-844.802 370.5,-844.802"/>
 <polygon fill="none" stroke="black" points="370.5,-844.802 370.5,-882.802 410.5,-882.802 410.5,-844.802 370.5,-844.802"/>
-<text text-anchor="start" x="374.5" y="-867.602" font-family="Times,serif" font-size="14.00"> 0.69 </text>
+<text text-anchor="start" x="374.5" y="-867.602" font-family="Times,serif" font-size="14.00"> 0.70 </text>
 <text text-anchor="start" x="375.5" y="-852.602" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- LeakyRelu_3/Maximum&#45;&gt;MaxPool_3 -->
@@ -254,11 +254,11 @@
 <text text-anchor="start" x="243" y="-724.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="317.5,-716.802 317.5,-754.802 373.5,-754.802 373.5,-716.802 317.5,-716.802"/>
 <polygon fill="none" stroke="black" points="317.5,-716.802 317.5,-754.802 373.5,-754.802 373.5,-716.802 317.5,-716.802"/>
-<text text-anchor="start" x="322.5" y="-739.602" font-family="Times,serif" font-size="14.00"> 211.29 </text>
+<text text-anchor="start" x="322.5" y="-739.602" font-family="Times,serif" font-size="14.00"> 212.01 </text>
 <text text-anchor="start" x="321.5" y="-724.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffaf" stroke="none" points="373.5,-716.802 373.5,-754.802 413.5,-754.802 413.5,-716.802 373.5,-716.802"/>
 <polygon fill="none" stroke="black" points="373.5,-716.802 373.5,-754.802 413.5,-754.802 413.5,-716.802 373.5,-716.802"/>
-<text text-anchor="start" x="377.5" y="-739.602" font-family="Times,serif" font-size="14.00"> 9.71 </text>
+<text text-anchor="start" x="377.5" y="-739.602" font-family="Times,serif" font-size="14.00"> 9.68 </text>
 <text text-anchor="start" x="378.5" y="-724.602" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool_3&#45;&gt;LeakyRelu_4/Maximum -->
@@ -280,7 +280,7 @@
 <text text-anchor="start" x="242.5" y="-596.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-588.802 314.5,-626.802 370.5,-626.802 370.5,-588.802 314.5,-588.802"/>
 <polygon fill="none" stroke="black" points="314.5,-588.802 314.5,-626.802 370.5,-626.802 370.5,-588.802 314.5,-588.802"/>
-<text text-anchor="start" x="319.5" y="-611.602" font-family="Times,serif" font-size="14.00"> 926.53 </text>
+<text text-anchor="start" x="319.5" y="-611.602" font-family="Times,serif" font-size="14.00"> 929.58 </text>
 <text text-anchor="start" x="318.5" y="-596.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffcb" stroke="none" points="370.5,-588.802 370.5,-626.802 410.5,-626.802 410.5,-588.802 370.5,-588.802"/>
 <polygon fill="none" stroke="black" points="370.5,-588.802 370.5,-626.802 410.5,-626.802 410.5,-588.802 370.5,-588.802"/>
@@ -306,11 +306,11 @@
 <text text-anchor="start" x="243" y="-468.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="317.5,-460.802 317.5,-498.802 373.5,-498.802 373.5,-460.802 317.5,-460.802"/>
 <polygon fill="none" stroke="black" points="317.5,-460.802 317.5,-498.802 373.5,-498.802 373.5,-460.802 317.5,-460.802"/>
-<text text-anchor="start" x="322.5" y="-483.602" font-family="Times,serif" font-size="14.00"> 327.03 </text>
+<text text-anchor="start" x="322.5" y="-483.602" font-family="Times,serif" font-size="14.00"> 324.86 </text>
 <text text-anchor="start" x="321.5" y="-468.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffb0" stroke="none" points="373.5,-460.802 373.5,-498.802 413.5,-498.802 413.5,-460.802 373.5,-460.802"/>
 <polygon fill="none" stroke="black" points="373.5,-460.802 373.5,-498.802 413.5,-498.802 413.5,-460.802 373.5,-460.802"/>
-<text text-anchor="start" x="377.5" y="-483.602" font-family="Times,serif" font-size="14.00"> 9.18 </text>
+<text text-anchor="start" x="377.5" y="-483.602" font-family="Times,serif" font-size="14.00"> 9.24 </text>
 <text text-anchor="start" x="378.5" y="-468.602" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool_4&#45;&gt;LeakyRelu_5/Maximum -->
@@ -332,7 +332,7 @@
 <text text-anchor="start" x="242.5" y="-340.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="314.5,-332.802 314.5,-370.802 370.5,-370.802 370.5,-332.802 314.5,-332.802"/>
 <polygon fill="none" stroke="black" points="314.5,-332.802 314.5,-370.802 370.5,-370.802 370.5,-332.802 314.5,-332.802"/>
-<text text-anchor="start" x="319.5" y="-355.602" font-family="Times,serif" font-size="14.00"> 450.94 </text>
+<text text-anchor="start" x="319.5" y="-355.602" font-family="Times,serif" font-size="14.00"> 449.93 </text>
 <text text-anchor="start" x="318.5" y="-340.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffffcb" stroke="none" points="370.5,-332.802 370.5,-370.802 410.5,-370.802 410.5,-332.802 370.5,-332.802"/>
 <polygon fill="none" stroke="black" points="370.5,-332.802 370.5,-370.802 410.5,-370.802 410.5,-332.802 370.5,-332.802"/>
@@ -358,11 +358,11 @@
 <text text-anchor="start" x="239" y="-212.602" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="316.5,-204.802 316.5,-242.802 372.5,-242.802 372.5,-204.802 316.5,-204.802"/>
 <polygon fill="none" stroke="black" points="316.5,-204.802 316.5,-242.802 372.5,-242.802 372.5,-204.802 316.5,-204.802"/>
-<text text-anchor="start" x="321.5" y="-227.602" font-family="Times,serif" font-size="14.00"> 314.67 </text>
+<text text-anchor="start" x="321.5" y="-227.602" font-family="Times,serif" font-size="14.00"> 312.56 </text>
 <text text-anchor="start" x="320.5" y="-212.602" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffff66" stroke="none" points="372.5,-204.802 372.5,-242.802 419.5,-242.802 419.5,-204.802 372.5,-204.802"/>
 <polygon fill="none" stroke="black" points="372.5,-204.802 372.5,-242.802 419.5,-242.802 419.5,-204.802 372.5,-204.802"/>
-<text text-anchor="start" x="376.5" y="-227.602" font-family="Times,serif" font-size="14.00"> 33.38 </text>
+<text text-anchor="start" x="376.5" y="-227.602" font-family="Times,serif" font-size="14.00"> 33.60 </text>
 <text text-anchor="start" x="381" y="-212.602" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- MaxPool_5&#45;&gt;LeakyRelu_6/Maximum -->
@@ -384,11 +384,11 @@
 <text text-anchor="start" x="239" y="-84.6025" font-family="Times,serif" font-size="14.00"> (MFLOPs) </text>
 <polygon fill="#ffffff" stroke="none" points="316.5,-76.8025 316.5,-114.802 372.5,-114.802 372.5,-76.8025 316.5,-76.8025"/>
 <polygon fill="none" stroke="black" points="316.5,-76.8025 316.5,-114.802 372.5,-114.802 372.5,-76.8025 316.5,-76.8025"/>
-<text text-anchor="start" x="321.5" y="-99.6025" font-family="Times,serif" font-size="14.00"> 313.27 </text>
+<text text-anchor="start" x="321.5" y="-99.6025" font-family="Times,serif" font-size="14.00"> 313.52 </text>
 <text text-anchor="start" x="320.5" y="-84.6025" font-family="Times,serif" font-size="14.00"> (MB/s) </text>
 <polygon fill="#ffff00" stroke="none" points="372.5,-76.8025 372.5,-114.802 419.5,-114.802 419.5,-76.8025 372.5,-76.8025"/>
 <polygon fill="none" stroke="black" points="372.5,-76.8025 372.5,-114.802 419.5,-114.802 419.5,-76.8025 372.5,-76.8025"/>
-<text text-anchor="start" x="376.5" y="-99.6025" font-family="Times,serif" font-size="14.00"> 67.00 </text>
+<text text-anchor="start" x="376.5" y="-99.6025" font-family="Times,serif" font-size="14.00"> 66.94 </text>
 <text text-anchor="start" x="381" y="-84.6025" font-family="Times,serif" font-size="14.00"> (ms)</text>
 </g>
 <!-- LeakyRelu_6/Maximum&#45;&gt;LeakyRelu_7/Maximum -->
@@ -420,10 +420,10 @@
 <text text-anchor="start" x="480" y="-1945.1" font-family="Times,serif" font-size="14.00">12 SHV Processors</text>
 <polygon fill="#dadada" stroke="none" points="440.5,-1914.3 440.5,-1937.3 625.5,-1937.3 625.5,-1914.3 440.5,-1914.3"/>
 <polygon fill="none" stroke="black" points="440.5,-1914.3 440.5,-1937.3 625.5,-1937.3 625.5,-1914.3 440.5,-1914.3"/>
-<text text-anchor="start" x="462" y="-1922.1" font-family="Times,serif" font-size="14.00">Inference time 171.30 ms</text>
+<text text-anchor="start" x="462" y="-1922.1" font-family="Times,serif" font-size="14.00">Inference time 171.51 ms</text>
 <polygon fill="#e2e2e2" stroke="none" points="440.5,-1891.3 440.5,-1914.3 625.5,-1914.3 625.5,-1891.3 440.5,-1891.3"/>
 <polygon fill="none" stroke="black" points="440.5,-1891.3 440.5,-1914.3 625.5,-1914.3 625.5,-1891.3 440.5,-1891.3"/>
-<text text-anchor="start" x="459" y="-1899.1" font-family="Times,serif" font-size="14.00">Bandwidth 451.94 MB/sec</text>
+<text text-anchor="start" x="459" y="-1899.1" font-family="Times,serif" font-size="14.00">Bandwidth 451.37 MB/sec</text>
 <polygon fill="#dadada" stroke="none" points="440.5,-1868.3 440.5,-1891.3 625.5,-1891.3 625.5,-1868.3 440.5,-1868.3"/>
 <polygon fill="none" stroke="black" points="440.5,-1868.3 440.5,-1891.3 625.5,-1891.3 625.5,-1868.3 440.5,-1868.3"/>
 <text text-anchor="start" x="444.5" y="-1876.1" font-family="Times,serif" font-size="14.00">This network is Compute bound</text>
