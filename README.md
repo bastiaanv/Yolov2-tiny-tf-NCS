@@ -11,6 +11,7 @@ I made this repo to make a tensorflow implementation of Yolov2 possible for the 
 - install ncsdk2 and opencv2
 - run the following command in the terminal:
 ```python
+python3 Script.py
 make run
 ```
 - and done! The output of the network will look something like this:
@@ -20,7 +21,10 @@ make run
 ### How to use it normally / in debug mode
 - clone the repo
 - install opencv2
-- run the following script with python3: Script.py
+- run the following script with python3: 
+```python
+Script.py
+```
 - and done! The output should be the same as on the NCS
 
 ### Note!
