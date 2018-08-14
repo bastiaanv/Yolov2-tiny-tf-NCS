@@ -227,7 +227,7 @@ class Net:
 				input_image = cv2.putText(input_image, best_class_name, (nms_predictions[i][0][0]+5, nms_predictions[i][0][1]+20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, 4)
 
 		#resize image back to original and show it
-		input_image = cv2.resize(input_image,(self.actual_height, self.actual_width))
+		input_image = cv2.resize(input_image,(self.actual_width, self.actual_height))
 
 		return input_image, nms_predictions
 
