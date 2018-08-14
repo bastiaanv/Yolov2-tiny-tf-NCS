@@ -35,4 +35,4 @@ The processing power of the NCS is not as well as 4 titan X (pascal) GPU's, ofco
 If anybody can help me improve this lost, it would be much appreciated!! Any other sugestions and questions are welcome as well! You can contact me on this repo or at: verhaar.bastiaan@gmail.com
 
 ### Future plans
-I am planning to program the project furture to make webcames compatible with this project and I have planned to make another repo with a yolov3-tiny implementation
+I have planned to make another repo with a yolov3-tiny implementation
