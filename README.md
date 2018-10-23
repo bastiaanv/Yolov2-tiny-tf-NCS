@@ -28,11 +28,8 @@ Script.py
 - and done! The output should be the same as on the NCS
 
 ### Note!
-The processing power of the NCS is not as well as 4 titan X (pascal) GPU's, ofcourse. That is why you will get a processing time of ~6Hz / ~170ms, instead of 220Hz like advertised on the Yolov2 page. The biggest lost in preformance is made in conv7 and conv8:
+The processing power of the NCS is not as good as 4 titan X (pascal) GPU's, ofcourse. That is why you will get a processing time of ~6Hz / ~170ms, instead of 220Hz like advertised on the Yolov2 page. The biggest lost in preformance is made in conv7 and conv8:
 
 ![alt text](https://github.com/bastiaanv/Yolov2-tiny-tf-NCS/blob/master/images/Preformance%20lost.png "Preformance lost")
 
 If anybody can help me improve this lost, it would be much appreciated!! Any other sugestions and questions are welcome as well! You can contact me on this repo or at: verhaar.bastiaan@gmail.com
-
-### Future plans
-I have planned to make another repo with a yolov3-tiny implementation
