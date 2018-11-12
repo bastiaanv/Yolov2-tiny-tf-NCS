@@ -106,7 +106,7 @@ class feed_forward_thread( threading.Thread ):
 			cv2.imshow( self.NN.cv_window_name, output_image )
 			cv2.waitKey( 0 )
 
-		#Close device and with that the thread
+		#Close device and with it the thread
 		self.graph.destroy()
 		self.fifoIn.destroy()
 		self.fifoOut.destroy()
@@ -114,11 +114,11 @@ class feed_forward_thread( threading.Thread ):
 
 
 	def run_interference( self, image ):
-		inputs = self.NN.preproces_image( image )
+		resize_image, inputs = self.NN.preproces_image( image )
 		self.graph.queue_inference_with_fifo_elem( self.fifoIn, self.fifoOut, inputs, 'user object' )
 
 		prediction, _ = self.fifoOut.read_elem()
-		return self.NN.postprocess( prediction, image, 0.3, 0.3 )
+		return self.NN.postprocess( prediction, resize_image, 0.3, 0.3 )
 
 
 #Run script

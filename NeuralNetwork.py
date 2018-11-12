@@ -40,6 +40,7 @@ class Net:
 	cv_window_name = "Result - press q to quit"
 	fps = 0.0
 	seconds = 0
+    anchors = [1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52]
 
 	def leaky_relu(self, x, alpha=0.1):
 		return tf.nn.leaky_relu(x, alpha=alpha)
@@ -120,7 +121,7 @@ class Net:
 		image_data /= 255.
 		image_array = np.expand_dims(image_data, 0)
 
-		return image_array
+		return resized_image, image_array
 
 
 	def iou(self, boxA, boxB):
@@ -174,12 +175,8 @@ class Net:
 
 		return nms_predictions
 
-	def postprocess(self, predictions, input, score_threshold, iou_threshold):
-
-		input_image = cv2.resize(input, (self.input_height, self.input_width), interpolation = cv2.INTER_CUBIC)
-
-		anchors = [1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52]
-		thresholded_predictions = []
+	def postprocess(self, predictions, input_image, score_threshold, iou_threshold):
+        thresholded_predictions = []
 		predictions = np.reshape(predictions, (13,13,5,25))
 
 		# IMPORTANT: Compute the coordinates and score of the B-Boxes by considering the parametrization of YOLOv2
@@ -190,8 +187,8 @@ class Net:
 					center_x = (float(col) + self.sigmoid(tx)) * 32.0
 					center_y = (float(row) + self.sigmoid(ty)) * 32.0
 
-					roi_w = np.exp(tw) * anchors[2*b + 0] * 32.0
-					roi_h = np.exp(th) * anchors[2*b + 1] * 32.0
+					roi_w = np.exp(tw) * self.anchors[2*b + 0] * 32.0
+					roi_h = np.exp(th) * self.anchors[2*b + 1] * 32.0
 
 					final_confidence = self.sigmoid(tc)
 
@@ -202,13 +199,13 @@ class Net:
 					best_class = class_predictions.index(max(class_predictions))
 					best_class_score = class_predictions[best_class]
 
-					# Compute the final coordinates on both axes
-					left   = int(center_x - (roi_w/2.))
-					right  = int(center_x + (roi_w/2.))
-					top    = int(center_y - (roi_h/2.))
-					bottom = int(center_y + (roi_h/2.))
+                    if( (final_confidence * best_class_score) > score_threshold):
+                        # Compute the final coordinates on both axes
+                        left   = int(center_x - (roi_w/2.))
+                        right  = int(center_x + (roi_w/2.))
+                        top    = int(center_y - (roi_h/2.))
+                        bottom = int(center_y + (roi_h/2.))
 		
-					if( (final_confidence * best_class_score) > score_threshold):
 						thresholded_predictions.append([ [left,top,right,bottom], final_confidence * best_class_score, self.classes[best_class] ])
 
 		nms_predictions = []
@@ -220,11 +217,9 @@ class Net:
 			for i in range(len(nms_predictions)):
 				color = self.colors[nms_predictions[i][2]]
 				best_class_name = nms_predictions[i][2]
-				textWidth = cv2.getTextSize(best_class_name, cv2.FONT_HERSHEY_SIMPLEX, 1, 1)[0][0] + 10
 			
 				input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]), (nms_predictions[i][0][2],nms_predictions[i][0][3]), color)
-				input_image = cv2.rectangle(input_image, (nms_predictions[i][0][0], nms_predictions[i][0][1]), (nms_predictions[i][0][0]+textWidth, nms_predictions[i][0][1]+20), color, -1)
-				input_image = cv2.putText(input_image, best_class_name, (nms_predictions[i][0][0]+5, nms_predictions[i][0][1]+20), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, 4)
+				input_image = cv2.putText(input_image, best_class_name, (nms_predictions[i][0][0], nms_predictions[i][0][1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, 4)
 
 		#resize image back to original and show it
 		input_image = cv2.resize(input_image,(self.actual_width, self.actual_height))

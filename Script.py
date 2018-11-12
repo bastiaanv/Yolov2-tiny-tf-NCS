@@ -9,7 +9,7 @@ cv2_image = cv2.imread("./images/Traffic.jpg")
 
 NN = NeuralNetwork.Net(Debugging=True)
 image = NN.image
-picture = NN.preproces_image(cv2_image)
+resize_picture, picture = NN.preproces_image(cv2_image)
 
 
 
@@ -25,7 +25,7 @@ with tf.Session() as sess:
 	saver.save(sess, "./model/NN.ckpt")
 	tf.train.write_graph( sess.graph_def, "./model/", "NN.pb", as_text=False )	
 
-	output_image, boxes = NN.postprocess(prediction, cv2_image, 0.3, 0.3)
+	output_image, boxes = NN.postprocess(prediction, resize_picture, 0.3, 0.3)
 	cv2.imwrite("./images/test.jpg", output_image)
 
 	print("Done!!")
