@@ -19,11 +19,11 @@ with tf.Session() as sess:
 	sess.run(tf.global_variables_initializer())
 	prediction = sess.run(NN.predict(), feed_dict={image:picture})
 	print("Time took to compute: " + str((time.time()-start)*1000) + "ms")
-	
+
 	#Save Network
 	saver = tf.train.Saver()
 	saver.save(sess, "./model/NN.ckpt")
-	tf.train.write_graph( sess.graph_def, "./model/", "NN.pb", as_text=False )	
+	tf.train.write_graph( sess.graph_def, "./model/", "NN.pb", as_text=False )
 
 	output_image, boxes = NN.postprocess(prediction, resize_picture, 0.3, 0.3)
 	cv2.imwrite("./images/test.jpg", output_image)

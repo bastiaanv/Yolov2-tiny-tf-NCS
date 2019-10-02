@@ -40,7 +40,7 @@ class Net:
 	cv_window_name = "Result - press q to quit"
 	fps = 0.0
 	seconds = 0
-    anchors = [1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52]
+	anchors = [1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52]
 
 	def leaky_relu(self, x, alpha=0.1):
 		return tf.nn.leaky_relu(x, alpha=alpha)
@@ -176,7 +176,7 @@ class Net:
 		return nms_predictions
 
 	def postprocess(self, predictions, input_image, score_threshold, iou_threshold):
-        thresholded_predictions = []
+		thresholded_predictions = []
 		predictions = np.reshape(predictions, (13,13,5,25))
 
 		# IMPORTANT: Compute the coordinates and score of the B-Boxes by considering the parametrization of YOLOv2
@@ -199,13 +199,13 @@ class Net:
 					best_class = class_predictions.index(max(class_predictions))
 					best_class_score = class_predictions[best_class]
 
-                    if( (final_confidence * best_class_score) > score_threshold):
-                        # Compute the final coordinates on both axes
-                        left   = int(center_x - (roi_w/2.))
-                        right  = int(center_x + (roi_w/2.))
-                        top    = int(center_y - (roi_h/2.))
-                        bottom = int(center_y + (roi_h/2.))
-		
+					if( (final_confidence * best_class_score) > score_threshold):
+						# Compute the final coordinates on both axes
+						left   = int(center_x - (roi_w/2.))
+						right  = int(center_x + (roi_w/2.))
+						top    = int(center_y - (roi_h/2.))
+						bottom = int(center_y + (roi_h/2.))
+
 						thresholded_predictions.append([ [left,top,right,bottom], final_confidence * best_class_score, self.classes[best_class] ])
 
 		nms_predictions = []
